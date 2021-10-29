@@ -24,8 +24,10 @@ export default function Home({products}: IProductListProps) {
         </Head>
       <main className="main">
         <Jumbotron />
-        <ProductList products={products} />
+        <ProductList products={products.slice(0, 3)} />
         <Contact />
+        <Jumbotron />
+        <ProductList products={products.slice(3, 6)} />
       </main>
         <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js" />
         <div hidden id="snipcart" data-api-key="OWNlZTNlYmItZTU5OS00MmI4LThjOTAtMjY0NzAyYmI2ODAxNjM3NjIyMjY3MDMxMTIzMzUx"/>
@@ -56,6 +58,30 @@ export const products: IProduct[] = [
         price: 250,
         description: "Superbe iPhone XR comme neuf ;)",
         url: '/api/products/iphonexr',
+        image: iphone,
+    },
+    {
+        id: "4",
+        name: "iphone 11",
+        price: 700,
+        description: "Superbe iPhone 11 comme neuf ;)",
+        url: '/api/products/iphone11',
+        image: iphone,
+    },
+    {
+        id: "5",
+        name: "iphone 11S",
+        price: 750,
+        description: "Superbe iPhone 11S comme neuf ;)",
+        url: '/api/products/iphone11s',
+        image: iphone,
+    },
+    {
+        id: "6",
+        name: "iphone 11R",
+        price: 780,
+        description: "Superbe iPhone 11R comme neuf ;)",
+        url: '/api/products/iphone11r',
         image: iphone,
     },
 ]
